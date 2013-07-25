@@ -1,0 +1,41 @@
+<div class="container row">
+  <div class="half" style="padding-left">
+    <!-- The slideshow -->
+    <ul class="rslides">
+      <li><%= image_tag "slide1.jpg" %></li>
+      <li><%= image_tag "slide2.jpg" %></li>
+      <li><%= image_tag "slide3.jpg" %></li>
+      <li><%= image_tag "slide4.jpg" %></li>
+      <li><%= image_tag "slide5.jpg" %></li>
+      <li><%= image_tag "slide6.jpg" %></li>
+      <li><%= image_tag "slide7.jpg" %></li>
+      <li><%= image_tag "slide8.jpg" %></li>
+    </ul>
+    <script>
+        $(function() {
+            $(".rslides").responsiveSlides({
+                timeout: 6000,
+                pager: false,
+                pause:false,
+                //nav: true,
+                speed: 500,
+                //namespace: "callbacks",
+            });
+
+        });
+    </script>
+  </div>
+
+  <div class="half">
+
+
+    <p style="padding-left:20px; font-size:1.25em; line-height:150%"> Coil Clean Canada is a national company committed to providing quality and professional service. We
+      are licenced by the provincial government and certified by the <a href="http://cadstraining.ca"><b>Canadian Authority for Decontamination
+      Specialists</b></a> a professional regulatory body. <br><br>We are fully compliant with all government regulations,
+      including the recent mandate of the <a href="http://www2.publicationsduquebec.gouv.qc.ca/dynamicSearch/telecharge.php?type=3&file=/B_1_1/B1_1R3_A.HTM">Quebec Safety Act of the Building Code</a>,
+      as well as the <a href="https://osr.ashrae.org/Public%20Review%20Draft%20Standards%20Lib/Std-188P-PPR2%20Final%206%2010%202011.pdf">ASHRAE 188P standard</a>.
+    </p>
+    <br/>
+    <br/>
+  </div>
+</div>

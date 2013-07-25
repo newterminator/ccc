@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ccc</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+      html {
+          /*background-color:#8ea088;*/
+          background: #98bfd0 url(assets/03.jpg) no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+      body {
+          background: url('assets/03.jpg') no-repeat center center fixed;
+          -moz-background-size: cover;
+          -webkit-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          /*background-color:#8ea088;*/
+      }
+      .logo
+      {
+          height:180px;
+          width:960px;
+          background:url('assets/logo1.png') no-repeat;
+          padding:-50px;
+      }
+
+  </style>
+</head>
+
+<body>
+<div id="page">
+  <br>
+  <div class="container row" style="border-bottom:0px solid #666666">
+    <div class="fifth">
+      <!-- Beginning of logo spinning-->
+      <div id="spritespin"></div>
+    </div>
+    <div class="threefifth">
+      <%= image_tag "ccc.png" %>
+    </div>
+    <div class="fifth">
+      <p style="padding-top:20px; position:absolute; font-family: 'Lato', sans-serif; font-weight:400; font-size:1.55em">1-855-729-<span style="">2645</span></p>
+      <p style="padding-top:45px; padding-left:105px; position:absolute; font-size:1.55em">(<span style="font-family: 'Anton', sans-serif; font-weight:400; color:red">COIL</span>)</p>
+    </div>
+  </div>
+  <style type="text/css">
+      #spritespin
+      {
+          height:90px;
+          width:90px;
+          background:url('assets/images/logo1.png') no-repeat;
+          padding:-50px;
+      }
+  </style>
+  <script type="text/javascript">
+      var onLoop=function()
+      {
+
+
+          $("#spritespin").spritespin({
+              width     : 90,  // window width
+              height    : 90,  // window height
+              frames    : 18,   // number of frames to show (soruce strings in array)
+              sense     : 1,   // inverts drag direction to match the spin of the photograph
+              animate   : true,
+              frameTime : 50,
+              source    : [
+                  "assetscenterlogo.png",
+                  "assets/turnleft1.png",
+                  "assets/turnleft2.png",
+                  "assets/turnleft3.png",
+                  "assets/turnleft4.png",
+                  "assets/turnleft5.png",
+                  "assets/turnleft6.png",
+                  "assets/turnleft7.png",
+                  "assets/turnleft8.png",
+                  "assets/turnright1.png",
+                  "assets/turnright2.png",
+                  "assets/turnright3.png",
+                  "assets/turnright4.png",
+                  "assets/turnright5.png",
+                  "assets/turnright6.png",
+                  "assets/turnright7.png",
+                  "assets/turnright8.png",
+                  "assets/turnright9.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png",
+                  "assets/centerlogo.png"
+              ]
+          });
+          var data = $(this).data("spritespin");
+
+          /*if (data === lastFrame){
+           //stop the animation
+           $(this).spritespin("animate", true);
+           // set timeout to start the animation in 5 seconds
+           //window.setTimeout("startAnimation('#spritespin');", 3000);
+           }
+           */
+      };
+      onLoop();
+      //setInterval(function(){onLoop()},3000);
+  </script>
+  <!-- End of logo spinning -->
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="twothird centered">
+      <p style="font-family: 'Raleway', sans-serif; font-size:1.5em">Cooling Tower / Coil & Tube Decontamination Services</p>
+    </div>
+  </div>
+
+  <div class="container row">
+    <div class="threequarter"><p style="font-family: 'Raleway', sans-serif">Quebec | Ontario | Manitoba | Saskatchewan | Alberta | British Columbia</p></div>
+    <div class="quarter"><a href="CCC_Brochure4.pdf"><%= image_tag "brochure.png" %></a></div>
+  </div>
+
+  <br>
+  <!-- start navigation menu -->
+  <div>
+      <%= render :partial => 'shared/navigation' %>
+  </div>
+  <!-- end of navigation menu -->
+  <script src="js/cbpTooltipMenu.min.js"></script>
+  <script>
+      var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+  </script>
+  </br>
+  </br>
+  </br>
+<%= yield %>
+  <div id="footers">
+    <br/><br/>
+    <p>Copyright &copy; <a href="http://coolingtowercleaning.ca/" title="Cooling Tower Cleaning" ><span>Cooling Tower Cleaning.ca</span></a>    </p>
+  </div>
+</div>
+</body>
+</html>

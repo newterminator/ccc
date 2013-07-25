@@ -1,0 +1,42 @@
+<ul id="cbp-tm-menu" class="cbp-tm-menu">
+  <li><%= link_to home_url, root_path%></li>
+  <li>
+    <%= link_to cooling_url,'#'%>
+    <ul class="cbp-tm-submenu">
+      <li><%= link_to "What are Cooling Towers?", coolingtower_path %></li>
+      <li><%= link_to "Dry Cooling Towers", drycoolingtower_path %></li>
+      <li><%= link_to "Wet Cooling Towers", wetcoolingtower_path %></li>
+      <li><%= link_to "Hybrid Cooling Towers", hybridcoolingtower_path %></li>
+      <li><%= link_to "Refrigeration Condenser Coils & Evaporator Coils", refrigeration_path %></li>
+      <li><%= link_to "Heat-Exchanging Tubes", heatexchange_path %></li>
+      <li><%= link_to "Chiller Tubes", chiller_path %></li>
+      <li><%= link_to "Boiler Tubes", boiler_path %></li>
+    </ul>
+  </li>
+  <li>
+    <%= link_to legion_url, '#' %>
+    <ul class="cbp-tm-submenu">
+      <li><%= link_to "What is Legionnaires' Disease?", legion_path %></li>
+      <li><%= link_to "How is Legionnaires' Disease contracted?", legioncontract_path %></li>
+
+    </ul>
+  </li>
+  <li><%= link_to services_url, services_path %></li>
+  <li>
+    <%= link_to media_url, '#' %>
+    <ul class="cbp-tm-submenu">
+      <li><%= link_to "2005 Toronto Outbreak", toronto_path %></li>
+      <li><%= link_to "2011 Playboy Mansion Outbreak", playboy_path %></li>
+      <li><%= link_to "2012 Quebec City Outbreak", quebec_path %></li>
+    </ul>
+  </li>
+  <li>
+    <%= link_to regulation_url, '#' %>
+    <ul class="cbp-tm-submenu">
+      <li><%= link_to "Quebec Mandate", quebecmandate_path %></li>
+      <li><%= link_to "Hamilton By-Law", hamilton_path %></li>
+      <li><%= link_to "Ontario Occupational Health & safety Act", ontario_path %></li>
+    </ul>
+  </li>
+  <li><%= link_to contact_url, new_inquiry_path %></li>
+</ul>
